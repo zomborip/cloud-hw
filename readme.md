@@ -14,8 +14,11 @@ A virtuális környezet inicializálásához:
 
 ```bash
 python3 -m venv venv
+```
+```bash
 source venv/bin/activate
 ```
+
 Lehet, hogy fog egy *sudo apt install-t* kérni
 
 Másoljuk át a helyes K3S Login fileokat:
