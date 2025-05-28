@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-server
+  template:
+    metadata:
+      labels:
+        app: my-server
+    spec:
+      containers:
+        - name: my-server
+          image: hashicorp/http-echo
+          args:
+            - "-text=Hello from my-server"
+            - "-listen=:8080"
+          ports:
+            - containerPort: 8080
