@@ -1,5 +1,9 @@
 # Cloud - K8S Homework
 
+## Feladat leírás:
+
+A Tárgy [GitHub Repójában](https://github.com/hsnlab/edu-cloud-native/tree/main/lab-homeworks/automated-ingress-operator) van a házifeladat leírása.
+
 ## AWS Setup:
 
 Be kell lépni az [**Academy Learner Lab**](https://awsacademy.instructure.com/courses/111116/modules/items/10438056)-ba
