@@ -23,6 +23,9 @@ Lehet, hogy fog egy *sudo apt install-t* kérni
 
 Másoljuk át a helyes K3S Login fileokat:
 ```bash
+mkdir -p ~/.kube
+```
+```bash
 cp /etc/rancher/k3s/k3s.yaml ~/.kube/config
 ```
 
