@@ -10,8 +10,14 @@ Be kell lépni két terminálba. Az *output* segítségével
 
 ## Setup & Virtual env
 
+Másoljuk át a helyes K3S Login fileokat:
+```bash
+mkdir -p ~/.kube
+```
+```bash
+cp /etc/rancher/k3s/k3s.yaml ~/.kube/config
+```
 A virtuális környezet inicializálásához:
-
 ```bash
 python3 -m venv venv
 ```
@@ -21,26 +27,16 @@ source venv/bin/activate
 
 Lehet, hogy fog egy *sudo apt install-t* kérni
 
-Másoljuk át a helyes K3S Login fileokat:
-```bash
-mkdir -p ~/.kube
-```
-```bash
-cp /etc/rancher/k3s/k3s.yaml ~/.kube/config
-```
 
 A követelmények installálásához:
 
 ```bash
 pip install -r requirements.txt
 ```
-
 Le kell ellenőrizni, hogy biztosan be legyen állítava a megfelelő környezeti változó:
-
 ```bash
 export KUBECONFIG=~/.kube/config
 ```
-
 ## Futtatás és tesztelés
 
 Ehheza folyamathoz több terminálablakra lesz szükségünk. Az egyikben az auto-ingress script fut, a másikban pedig a Kubernetes parancsokat tudjuk kiadni
